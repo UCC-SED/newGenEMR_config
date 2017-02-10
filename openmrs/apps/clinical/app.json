@@ -22,7 +22,8 @@
       "patientUuid",
       "visitUuid"
    ],
-   "config":{  
+   "config":{
+      "showFormsDate" : true,
       "enableRadiologyOrderOptions":[  
          "Urgent",
          "NeedsPrint"
@@ -121,6 +122,9 @@
             "allowAddMore":true
          },
          "ARV Reason - No Start":{  
+            "dropdown":true
+         },
+         "Follow up Status":{
             "dropdown":true
          },
          "ARV Start":{  

@@ -68,15 +68,5 @@
     "icon": "fa fa-calendar",
     "order": 11,
     "requiredPrivilege": "App: appointmentschedulingui.home"
-  },
-  "atomfeedConsole": {
-    "id": "bahmni.atomfeed.console",
-    "extensionPointId": "org.bahmni.home.dashboard",
-    "type": "link",
-    "translationKey": "MODULE_LABEL_ATOMFEED_CONSOLE_KEY",
-    "url": "/atomfeed-console",
-    "icon": "fa fa-terminal",
-    "order": 13,
-    "requiredPrivilege": "app:admin"
   }
 }
