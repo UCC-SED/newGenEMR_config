@@ -4,7 +4,7 @@
         "extensionPointId": "org.bahmni.patient.search",
         "type": "config",
         "extensionParams": {
-            "searchHandler": "emrapi.sqlSearch.activePatients",
+            "searchHandler": "emrapi.sqlSearch.programPatients",
             "translationKey": "MODULE_LABEL_PROGRAMS_KEY",
             "forwardUrl": "#/programs/patient/{{patientUuid}}/consultationContext"
         },

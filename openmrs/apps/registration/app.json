@@ -19,17 +19,26 @@
         "config" : {
             "patientInformation": {
                 "additionalPatientInformation": {
-                    "title": "Additional Patient Information",
+                    "title": "National Identification",
+					 "translationKey": "National Identification",
                     "attributes": [
-                        "distanceFromCenter",
-                        "isUrban",
-                        "cluster",
-                        "RationCard",
-                        "familyIncome",
-                        "debt",
-                        "cluster"
-                    ]
+                        "nationalID",
+						"nationalIDValue"
+                        
+                    ],
+					"allowAddMore":true
                 },
+                 "deadNote": {
+                   "title": "Death Information Notes",
+                   "translationKey": "Death Information Notes",
+	
+                   "attributes": [
+                        "deathInformationNotes"
+						
+                 ],
+				  "order": 2,
+				  "expanded": true
+             },
                 "hidden": {
                     "attributes": [
                         "primaryContact"
@@ -37,7 +46,7 @@
                 },
                 "defaults":  {
                     "class": "General",
-                    "landHolding": 2
+                    "nationalID": "National ID"
                 }
             },
             "addressHierarchy": {
@@ -51,36 +60,23 @@
 
             "autoCompleteFields":["familyName", "caste"],
             "defaultIdentifierPrefix": "GAN",
-            "defaultVisitType": "OPD",
+            "defaultVisitType": "HIV PROGRAMME",
+			"disablePhotoCapture": true,
             "searchByIdForwardUrl": "/patient/{{patientUuid}}",
+			"afterVisitSaveForwardUrl" : "../registration",
             "showMiddleName": true,
-            "showBirthTime": true,
+            "showBirthTime": false,
             "showCasteSameAsLastNameCheckbox": false,
             "printOptions": [
                 {
                     "translationKey": "REGISTRATION_PRINT_REG_CARD_LOCAL_KEY",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_local.html",
-                    "shortcutKey": "l"
-                },
-                {
-                    "translationKey": "REGISTRATION_PRINT_REG_CARD_KEY",
                     "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print.html",
-                    "shortcutKey": "p"
-                },
-                {
-                    "translationKey": "REGISTRATION_PRINT_SUPPLEMENTAL_PAPER",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/supplementalPaperLayout/print.html",
-                    "shortcutKey": "r"
-                },
-                {
-                    "translationKey": "REGISTRATION_PRINT_WITH_BARCODE",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/printWithBarcode.html",
-                    "shortcutKey": "c"
+                    "shortcutKey": "P"
                 }
             ],
             "conceptSetUI": {
                 "REGISTRATION FEES": {
-                    "required": true,
+                    "required": false,
                     "label": "Fee"
                 },
                 "FHS": {
@@ -100,14 +96,19 @@
             },
             "patientSearch": {
                 "address": {
-                    "label": "Rural Ward",
-                    "placeholder": "Enter ward",
+                    "label": "Village/Street",
+                    "placeholder": "Village/Street",
                     "field": "address2"
                 },
+				 "programAttributes": {
+              "label": "Program ID",
+              "placeholder": "Enter Reg ID",
+              "field": "Registration Number"
+            },
                 "customAttributes": {
-                    "label": "रुग्णाचे नाव",
-                    "placeholder": "रुग्णाचे नाव",
-                    "fields": ["givenNameLocal", "middleNameLocal", "familyNameLocal"]
+                    "label": "National/File ID",
+                    "placeholder": "File Reference, National ID",
+                    "fields": ["nationalID", "fileReferenceID"]
                 }
             }
         }
