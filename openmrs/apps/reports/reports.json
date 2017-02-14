@@ -5,24 +5,23 @@
         "config": {
             "forDataAnalysis": true,
             "patientAttributes": [
-                "caste",
-                "class",
-                "education",
-                "occupation",
-                "primaryContact"
+                "nationalID",
+                "maritalStatus",
+                "deathInformationNotes",
+                "nationalIDValue"
             ],
             "visitAttributes": [
                 "Visit Status",
                 "Admission Status"
             ],
             "patientAddresses": [
-                "address3",
-                "city_village"
+                "Council",
+                "Village/Street"
             ],
             "applyDateRangeFor": "visitStopDate",
             "visitTypesToFilter": [
-                "PHARMACY VISIT",
-                "OPD"
+                "HIV PROGRAMME",
+                "Special OPD"
             ]
         }
     },
@@ -64,34 +63,34 @@
         }
     },
     "testFormReport":{
-    "name": "Test Forms Report",
-    "type": "forms",
-     "config": {
-     "patientAttributes": [
-            "caste",
-            "class",
-            "education",
-            "occupation",
-            "primaryContact"
-        ],
-     "patientAddresses": [
-            "address3",
-            "city_village"
-        ],
-     "visitAttributes": [
-            "Visit Status",
-            "Admission Status"
-        ],    
-     "showVisitInfo": true,
-     "showProvider": true,
-     "formNamesToFilter": ["Vitals"],
-     "conceptNameDisplayFormat": "shortNamePreferred",
-     "locationTagsToFilter": [],
-     "programsToFilter": [],
-     "applyDateRangeFor": "obsDate",
-     "visitTypesToFilter": []
-     }
-},
+        "name": "Test Forms Report",
+        "type": "forms",
+        "config": {
+            "patientAttributes": [
+                "caste",
+                "class",
+                "education",
+                "occupation",
+                "primaryContact"
+            ],
+            "patientAddresses": [
+                "address3",
+                "city_village"
+            ],
+            "visitAttributes": [
+                "Visit Status",
+                "Admission Status"
+            ],
+            "showVisitInfo": true,
+            "showProvider": true,
+            "formNamesToFilter": ["Vitals"],
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "locationTagsToFilter": [],
+            "programsToFilter": [],
+            "applyDateRangeFor": "obsDate",
+            "visitTypesToFilter": []
+        }
+    },
     "chiefComplaintReport": {
         "name": "Chief Complaint Report",
         "type": "obsCount",
@@ -573,61 +572,61 @@
             ]
         }
     },
-  "GenericLabOrderReport": {
-    "name": "Lab Order Results",
-    "type": "labOrders",
-    "config": {
-      "patientAttributes": [
-        "caste",
-        "class",
-        "education",
-        "occupation",
-        "primaryContact"
-      ],
-      "patientAddresses": [
-        "address3",
-        "city_village"
-      ],
-      "visitAttributes": [
-        "Visit Status"
-      ],
-      "showVisitInfo": true,
-      "showProvider": true,
-      "programsToFilter": [],
-      "showReferredOutTests": true,
-      "conceptNamesToFilter": [
-        "Haemoglobin (Blood)"
-      ],
-      "conceptValuesToFilter": [
-        "10..100"
-      ],
-      "forDataAnalysis": true,
-      "excludeColumns": [
-        "address3"
-      ],
-      "showOrderDateTime": true
-    }
-  },
-  "GenericLabOrderReportAggregation": {
-    "name": "Test Name vs Gender",
-    "type": "aggregation",
-    "config": {
-      "report": {
+    "GenericLabOrderReport": {
+        "name": "Lab Order Results",
         "type": "labOrders",
         "config": {
-          "forDataAnalysis": true,
-          "showVisitInfo": true
+            "patientAttributes": [
+                "caste",
+                "class",
+                "education",
+                "occupation",
+                "primaryContact"
+            ],
+            "patientAddresses": [
+                "address3",
+                "city_village"
+            ],
+            "visitAttributes": [
+                "Visit Status"
+            ],
+            "showVisitInfo": true,
+            "showProvider": true,
+            "programsToFilter": [],
+            "showReferredOutTests": true,
+            "conceptNamesToFilter": [
+                "Haemoglobin (Blood)"
+            ],
+            "conceptValuesToFilter": [
+                "10..100"
+            ],
+            "forDataAnalysis": true,
+            "excludeColumns": [
+                "address3"
+            ],
+            "showOrderDateTime": true
         }
-      },
-      "rowGroups": [
-        "Test Name"
-      ],
-      "columnGroups": [
-        "Gender"
-      ],
-      "distinctGroups": [
-        "Patient Identifier"
-      ]
+    },
+    "GenericLabOrderReportAggregation": {
+        "name": "Test Name vs Gender",
+        "type": "aggregation",
+        "config": {
+            "report": {
+                "type": "labOrders",
+                "config": {
+                    "forDataAnalysis": true,
+                    "showVisitInfo": true
+                }
+            },
+            "rowGroups": [
+                "Test Name"
+            ],
+            "columnGroups": [
+                "Gender"
+            ],
+            "distinctGroups": [
+                "Patient Identifier"
+            ]
+        }
     }
-  }
 }
