@@ -1,42 +1,38 @@
 {
-    "visitReport10": {
-        "name": "Visit Reports",
-        "type": "visits",
-        "config": {
-            "forDataAnalysis": true,
-            "patientAttributes": [
-                "nationalID",
-                "maritalStatus",
-                "nationalIDValue"
-            ],
-            "visitAttributes": [
-                "Visit Status"
-            ],
-            "patientAddresses": [
-                "Council",
-                "Village/Street"
-            ],
-            "applyDateRangeFor": "visitStopDate",
-            "visitTypesToFilter": [
-                "HIV PROGRAMME",
-                "Special OPD"
-            ],
-            "sortBy" : [{"column" : "BirthDate", "sortOrder" : "desc"}]
 
-        }
-    },
     "visitReport90":{
         "name": "Visit Reports",
         "type": "visits",
         "config": {
             "forDataAnalysis": true,
-            "patientAttributes": ["maritalStatus"],
+            "patientAttributes": [ "nationalID", "maritalStatus", "nationalIDValue"],
             "visitAttributes": ["Visit Status", "Admission Status"],
             "patientAddresses": [ "address3","address2"],
             "applyDateRangeFor": "visitStopDate",
+            "excludeColumns": ["Patient Name","Date Of Admission","Date Of Discharge","Admission Status"],
+            "visitTypesToFilter": ["HIV PROGRAMME", "Special OPD"]
+        }
+    },
+    "ObsReport":{
+        "name": "Obs Report",
+        "type": "observations",
+        "config": {
+            "patientAttributes": [ "nationalID", "maritalStatus", "nationalIDValue"],
+            "visitAttributes": ["Visit Status", "Admission Status"],
+            "patientAddresses": [ "address3","address2"],
+            "showVisitInfo": true,
+            "showProvider": true,
+            "programsToFilter": [],
+            "conceptNamesToFilter": [],
+            "conceptValuesToFilter":[],
+            "conceptClassesToFilter": [],
+            "applyDateRangeFor": "obsDate",
+            "encounterPerRow": false,
+            "forDataAnalysis": true,
             "visitTypesToFilter": ["HIV PROGRAMME", "Special OPD"],
-            "additionalPatientIdentifiers": ["National Id"],
-            "ageGroupName":"Age group name"
+            "excludeColumns": ["Patient Name","Date Of Admission","Date Of Discharge","Admission Status"],
+            "ignoreEmptyValues": false,
+            "conceptNameDisplayFormat": "shortNamePreferred"
         }
     },
     "testReport": {
