@@ -1,18 +1,16 @@
 {
     "visitReport10": {
-        "name": "Visit Report",
+        "name": "Visit Reports",
         "type": "visits",
         "config": {
             "forDataAnalysis": true,
             "patientAttributes": [
                 "nationalID",
                 "maritalStatus",
-                "deathInformationNotes",
                 "nationalIDValue"
             ],
             "visitAttributes": [
-                "Visit Status",
-                "Admission Status"
+                "Visit Status"
             ],
             "patientAddresses": [
                 "Council",
@@ -22,7 +20,23 @@
             "visitTypesToFilter": [
                 "HIV PROGRAMME",
                 "Special OPD"
-            ]
+            ],
+            "sortBy" : [{"column" : "BirthDate", "sortOrder" : "desc"}]
+
+        }
+    },
+    "visitReport90":{
+        "name": "Visit Reports",
+        "type": "visits",
+        "config": {
+            "forDataAnalysis": true,
+            "patientAttributes": ["maritalStatus"],
+            "visitAttributes": ["Visit Status", "Admission Status"],
+            "patientAddresses": [ "address3","address2"],
+            "applyDateRangeFor": "visitStopDate",
+            "visitTypesToFilter": ["HIV PROGRAMME", "Special OPD"],
+            "additionalPatientIdentifiers": ["National Id"],
+            "ageGroupName":"Age group name"
         }
     },
     "testReport": {
