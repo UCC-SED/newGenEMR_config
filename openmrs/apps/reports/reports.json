@@ -12,5 +12,26 @@
             "excludeColumns": ["Patient Name","Date Of Admission","Date Of Discharge","Admission Status"],
             "visitTypesToFilter": ["HIV PROGRAMME", "Special OPD"]
         }
+    },
+    ,
+    "SampleGenericProgramReport": {
+        "name": "Generic program sample report",
+        "type": "programs",
+        "config": {
+            "patientAttributes": [
+                "education",
+                "primaryContact",
+                "secondaryContact",
+                "class",
+                "cluster"
+            ],
+            "patientAddresses": [
+                "city_village",
+                "address3"
+            ],
+            "programAttributes": [],
+            "forDataAnalysis": true,
+            "showAllStates": true
+        }
     }
 }
