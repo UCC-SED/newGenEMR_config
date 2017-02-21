@@ -13,9 +13,8 @@
             "visitTypesToFilter": ["HIV PROGRAMME", "Special OPD"]
         }
     },
-    ,
     "SampleGenericProgramReport": {
-        "name": "Generic program sample report",
+        "name": "Program sample report",
         "type": "programs",
         "config": {
             "patientAttributes": [
