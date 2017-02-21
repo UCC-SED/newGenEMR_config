@@ -13,18 +13,34 @@
             "visitTypesToFilter": ["HIV PROGRAMME", "Special OPD"]
         }
     },
-    "SampleGenericProgramReport": {
+    "CTC2ProgramReport": {
         "name": "CTC2 Enrollment Report",
         "type": "programs",
         "config": {
             "patientAttributes": [ "nationalID", "maritalStatus", "nationalIDValue"],
             "patientAddresses": [ "address3","address2"],
             "excludeColumns": ["Patient Name","Date Of Admission","Date Of Discharge","Admission Status",
-                "Completed Date", "Program Id", "Patient Id", "End Date","Completed Date"],
+                "Completed Date", "Program Id", "Patient Id", "End Date","Completed Date","OutCome"],
             "programAttributes": ["Registration Number"],
             "forDataAnalysis": true,
             "programNamesToFilter": [
                 "CTC2"
+            ],
+            "showAllStates": true
+        }
+    },
+    "SampleGenericProgramReport": {
+        "name": "Exposed Infant Enrollment Report",
+        "type": "programs",
+        "config": {
+            "patientAttributes": [ "nationalID", "maritalStatus", "nationalIDValue"],
+            "patientAddresses": [ "address3","address2"],
+            "excludeColumns": ["Patient Name","Date Of Admission","Date Of Discharge","Admission Status",
+                "Completed Date", "Program Id", "Patient Id", "End Date","Completed Date","OutCome"],
+            "programAttributes": ["Registration Number"],
+            "forDataAnalysis": true,
+            "programNamesToFilter": [
+                "Exposed Infant"
             ],
             "showAllStates": true
         }
