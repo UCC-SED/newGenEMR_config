@@ -26,7 +26,7 @@
             "programNamesToFilter": [
                 "CTC2"
             ],
-            "showAllStates": true
+            "showAllStates": false
         }
     },
     "SampleGenericProgramReport": {
@@ -42,7 +42,7 @@
             "programNamesToFilter": [
                 "Exposed Infant"
             ],
-            "showAllStates": true
+            "showAllStates": false
         }
     }
 }
