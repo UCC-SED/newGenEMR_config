@@ -19,7 +19,8 @@
         "config": {
             "patientAttributes": [ "nationalID", "maritalStatus", "nationalIDValue"],
             "patientAddresses": [ "address3","address2"],
-            "excludeColumns": ["Patient Name","Date Of Admission","Date Of Discharge","Admission Status"],
+            "excludeColumns": ["Patient Name","Date Of Admission","Date Of Discharge","Admission Status",
+                "Completed Date", "Program Id", "Patient Id", "End Date","Completed Date"],
             "programAttributes": ["Registration Number"],
             "forDataAnalysis": true,
             "programNamesToFilter": [
