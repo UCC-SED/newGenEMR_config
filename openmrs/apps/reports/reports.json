@@ -14,22 +14,17 @@
         }
     },
     "SampleGenericProgramReport": {
-        "name": "Program sample report",
+        "name": "CTC2 Enrollment Report",
         "type": "programs",
         "config": {
-            "patientAttributes": [
-                "education",
-                "primaryContact",
-                "secondaryContact",
-                "class",
-                "cluster"
-            ],
-            "patientAddresses": [
-                "city_village",
-                "address3"
-            ],
-            "programAttributes": [],
+            "patientAttributes": [ "nationalID", "maritalStatus", "nationalIDValue"],
+            "patientAddresses": [ "address3","address2"],
+            "excludeColumns": ["Patient Name","Date Of Admission","Date Of Discharge","Admission Status"],
+            "programAttributes": ["Registration Number"],
             "forDataAnalysis": true,
+            "programNamesToFilter": [
+                "CTC2"
+            ],
             "showAllStates": true
         }
     }
