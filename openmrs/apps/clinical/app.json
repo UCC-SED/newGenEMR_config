@@ -172,6 +172,9 @@
          "Coded3":{  
             "multiSelect":true
          },
+         "G) Hali ya Tiba na Matunzo (CTC)":{
+            "dropdown":true
+         },
          "Image":{  
             "allowAddMore":true
          },
