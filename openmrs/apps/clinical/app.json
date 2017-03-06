@@ -157,6 +157,9 @@
          "Feeding Practise":{  
             "dropdown":true
          },
+         "A) Sababu ya usajili":{
+            "multiSelect":true
+         },
          "PMTCT interventions received":{  
             "multiSelect":true
          },
