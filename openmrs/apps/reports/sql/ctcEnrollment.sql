@@ -1,12 +1,12 @@
 select distinct
   pi.identifier as EMRID,
-pp.date_enrolled as ENROLLED,
+  ppa.value_reference as CTCID,
+  pp.date_enrolled as ENROLLED,
+  DATE( p.birthdate) as DOB,
   p.gender as GENDER,
- DATE( p.birthdate) as DOB,
   pa.address2 as VILLAGE,
   pa.address4 as DISTRICT,
-  pa.address5 as REGION,
-  ppa.value_reference as CTCID
+  pa.address5 as REGION
   from
     person_name pn
     join patient_identifier pi on pn.person_id = pi.patient_id and pi.voided=0
