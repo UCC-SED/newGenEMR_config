@@ -14,7 +14,7 @@ pp.date_enrolled as ENROLLED,
     join patient_identifier_type pit on pi.identifier_type = pit.patient_identifier_type_id
 	join patient_program pp on pn.person_id=pp.patient_id
     join patient_program_attribute ppa on pp.patient_program_id=ppa.patient_program_id and ppa.attribute_type_id=1
-    join program pg on pp.program_id=pg.program_id and pg.name='CTC2'
+    join program pg on pp.program_id=pg.program_id and pg.name='Exposed Infant'
     join global_property gp on gp.property="emr.primaryIdentifierType" and gp.property_value=pit.uuid
     join person p on p.person_id = pn.person_id and p.voided=0
 order by
