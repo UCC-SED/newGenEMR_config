@@ -29,6 +29,13 @@
             "showAllStates": false
         }
     },
+    "AdherenceMonthlyReviewCohort": {
+        "name": "CTC2 Enrollment Report(NEW)",
+        "type": "MRSGeneric",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/ctcEnrollment.sql"
+        }
+    },
     "SampleGenericProgramReport": {
         "name": "Exposed Infant Enrollment Report",
         "type": "programs",
