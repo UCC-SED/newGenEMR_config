@@ -173,7 +173,7 @@
                     "isEditable":true
                 },
                 "expandedViewConfig":{
-                    "templateName":"BACTERIOLOGY CONCEPT SET",
+                    "templateName":"CTC2 Patient Record Form",
                     "groupByConcept":"Visit Date"
                 }
             },
