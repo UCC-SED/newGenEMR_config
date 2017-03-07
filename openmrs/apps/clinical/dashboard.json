@@ -82,6 +82,41 @@
                     }
                 }
             },
+            "htc":{
+                "translationKey":"DASHBOARD_TITLE_HIV_TESTING_COUNSELING",
+                "type":"HIV Testing and Counseling",
+                "isObservation":true,
+                "displayOrder":7,
+                "dashboardConfig":{
+                    "showDetailsButton":true,
+                    "conceptNames":[
+                        "HIV Testing and Counseling"
+                    ],
+                    "numberOfVisits":10,
+                    "isEditable":true
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "HIV Testing and Counseling"
+                    ],
+                    "numberOfVisits":10,
+                    "showDetailsButton":true,
+                    "pivotTable":{
+                        "numberOfVisits":"10",
+                        "groupBy":"encounters",
+                        "obsConcepts":[
+                            "HTC, Confirmatory",
+                            "HTC, Initial"
+                        ],
+                        "drugConcepts":[
+
+                        ],
+                        "labConcepts":[
+
+                        ]
+                    }
+                }
+            },
             "hei":{
                 "translationKey":"DASHBOARD_TITLE_HIE_CARD",
                 "type":"HEI Form",
