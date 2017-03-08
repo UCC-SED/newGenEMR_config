@@ -18,17 +18,7 @@
         ],
         "config" : {
             "patientInformation": {
-                "additionalPatientInformation": {
-                    "title": "National Identification",
-					 "translationKey": "National Identification",
-                    "attributes": [
-                        "nationalID",
-						"nationalIDValue"
-                        
-                    ],
-					"allowAddMore":true
-                },
-                 "deadNote": {
+               "deadNote": {
                    "title": "Death Information Notes",
                    "translationKey": "Death Information Notes",
 	
@@ -45,8 +35,7 @@
                     ]
                 },
                 "defaults":  {
-                    "class": "General",
-                    "nationalID": "National ID"
+                    "class": "General"
                 }
             },
             "addressHierarchy": {
@@ -107,8 +96,8 @@
             },
                 "customAttributes": {
                     "label": "National/File ID",
-                    "placeholder": "File Reference, National ID",
-                    "fields": ["nationalID", "fileReferenceID"]
+                    "placeholder": "File No",
+                    "fields": [ "fileReferenceID"]
                 }
             }
         }
