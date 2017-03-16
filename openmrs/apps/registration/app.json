@@ -50,7 +50,7 @@
             "autoCompleteFields":["familyName", "caste"],
             "defaultIdentifierPrefix": "GAN",
             "defaultVisitType": "HIV PROGRAMME",
-			"disablePhotoCapture": true,
+			"disablePhotoCapture": false,
             "searchByIdForwardUrl": "/patient/{{patientUuid}}",
 			"afterVisitSaveForwardUrl" : "../registration",
             "showMiddleName": true,
