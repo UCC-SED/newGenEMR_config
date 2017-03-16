@@ -92,7 +92,7 @@
                 "customAttributes": {
                     "label": "National/File ID",
                     "placeholder": "National/File ID",
-                    "fields": [ "fileReferenceID,National ID,Passport ID,Voting ID,Driving License"]
+                    "fields": [ "fileReferenceID"]
                 }
             }
         }
