@@ -84,11 +84,6 @@
                 "address1" : {"pattern" : "[a-zA-Z0-9]{3}", "errorMessage" : "Should contain 3 characters"}
             },
             "patientSearch": {
-                "address": {
-                    "label": "Village/Street",
-                    "placeholder": "Village/Street",
-                    "field": "address2"
-                },
 				 "programAttributes": {
               "label": "Program ID",
               "placeholder": "Enter Reg ID",
