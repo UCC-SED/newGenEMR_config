@@ -84,15 +84,15 @@
                 "address1" : {"pattern" : "[a-zA-Z0-9]{3}", "errorMessage" : "Should contain 3 characters"}
             },
             "patientSearch": {
-				 "programAttributes": {
+              "programAttributes": {
               "label": "Program ID",
               "placeholder": "Enter Reg ID",
               "field": "Registration Number"
             },
                 "customAttributes": {
                     "label": "National/File ID",
-                    "placeholder": "File No",
-                    "fields": [ "fileReferenceID"]
+                    "placeholder": "National/File ID",
+                    "fields": [ "fileReferenceID,National ID,Passport ID,Voting ID,Driving License"]
                 }
             }
         }
