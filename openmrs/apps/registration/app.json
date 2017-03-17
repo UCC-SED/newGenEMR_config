@@ -38,20 +38,21 @@
                     "class": "General"
                 }
             },
-          "NationalIdentifier": {
-            "title": "National Identification",
-            "translationKey": "National Identification",
-
-            "attributes": [
+          "NationalIdentifier" : {
+            "title" : "National Identification",
+            "attributes" : [
               "Driving License",
               "National ID",
               "Passport ID",
               "Voting ID"
-
-            ],
-            "order": 3,
-            "expanded": true
-
+            ]
+          },
+          "hidden": {
+            "attributes": [
+            ]
+          },
+          "defaults":  {
+          }
         },
             "addressHierarchy": {
                 "showAddressFieldsTopDown": false,
