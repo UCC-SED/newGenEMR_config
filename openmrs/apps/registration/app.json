@@ -52,10 +52,6 @@
             "order": 3,
             "expanded": true
 
-          },
-          "defaults":  {
-            "class": "General"
-          }
         },
             "addressHierarchy": {
                 "showAddressFieldsTopDown": false,
