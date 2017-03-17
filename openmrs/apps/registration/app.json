@@ -52,7 +52,7 @@
       "caste"
     ],
     "defaultIdentifierPrefix":"GAN",
-    "defaultVisitType":"HIV PROGRAMME",
+    "defaultVisitType":"OPD",
     "disablePhotoCapture":false,
     "searchByIdForwardUrl":"/patient/{{patientUuid}}",
     "afterVisitSaveForwardUrl":"../registration",
