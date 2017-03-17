@@ -38,6 +38,25 @@
                     "class": "General"
                 }
             },
+          "NationalIdentifier": {
+            "title": "National Identification",
+            "translationKey": "National Identification",
+
+            "attributes": [
+              "Driving License",
+              "National ID",
+              "Passport ID",
+              "Voting ID"
+
+            ],
+            "order": 3,
+            "expanded": true
+
+          },
+          "defaults":  {
+            "class": "General"
+          }
+        },
             "addressHierarchy": {
                 "showAddressFieldsTopDown": false,
                 "strictAutocompleteFromLevel": "stateProvince"
