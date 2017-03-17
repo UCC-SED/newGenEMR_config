@@ -1,115 +1,122 @@
 {
-        "id": "bahmni.registration",
-        "instanceOf":"bahmni.template.registration",
-        "description": "Bahmni Patient Registration App",
-        "extensionPoints": [
-            {
-                "id": "org.bahmni.registration.patient.search.result.action",
-                "description": "Bahmni Patient Search Result Action"
-            },
-            {
-                "id": "org.bahmni.registration.patient.next",
-                "description": "After Bahmni Patient Registration, forward url configuration"
-            }
+  "id":"bahmni.registration",
+  "instanceOf":"bahmni.template.registration",
+  "description":"Bahmni Patient Registration App",
+  "extensionPoints":[
+    {
+      "id":"org.bahmni.registration.patient.search.result.action",
+      "description":"Bahmni Patient Search Result Action"
+    },
+    {
+      "id":"org.bahmni.registration.patient.next",
+      "description":"After Bahmni Patient Registration, forward url configuration"
+    }
+  ],
+  "contextModel":[
+    "patientUuid",
+    "activeVisitUuid"
+  ],
+  "config":{
+    "patientInformation":{
+      "NationalIdentifier":{
+        "title":"National Identification",
+        "translationKey":"National Identification",
+        "attributes":[
+          "Driving License",
+          "National ID",
+          "Passport ID",
+          "Voting ID"
         ],
-        "contextModel": [
-            "patientUuid",
-            "activeVisitUuid"
-        ],
-        "config" : {
-            "patientInformation": {
-               "deadNote": {
-                   "title": "Death Information Notes",
-                   "translationKey": "Death Information Notes",
-	
-                   "attributes": [
-                        "deathInformationNotes"
-						
-                 ],
-				  "order": 2,
-				  "expanded": true
-             },
-                "hidden": {
-                    "attributes": [
-                        "primaryContact"
-                    ]
-                },
-                "defaults":  {
-                    "class": "General"
-                }
-            },
-          "NationalIdentifier" : {
-            "title" : "National Identification",
-            "attributes" : [
-              "Driving License",
-              "National ID",
-              "Passport ID",
-              "Voting ID"
-            ]
-          },
-          "hidden": {
-            "attributes": [
-            ]
-          },
-          "defaults":  {
-          }
-        },
-            "addressHierarchy": {
-                "showAddressFieldsTopDown": false,
-                "strictAutocompleteFromLevel": "stateProvince"
-            },
-            "relationshipTypeMap": {
-                "Doctor":"provider",
-                "Parent":"patient"
-            },
-
-            "autoCompleteFields":["familyName", "caste"],
-            "defaultIdentifierPrefix": "GAN",
-            "defaultVisitType": "HIV PROGRAMME",
-			"disablePhotoCapture": false,
-            "searchByIdForwardUrl": "/patient/{{patientUuid}}",
-			"afterVisitSaveForwardUrl" : "../registration",
-            "showMiddleName": true,
-            "showBirthTime": false,
-            "showCasteSameAsLastNameCheckbox": false,
-            "printOptions": [
-                {
-                    "translationKey": "REGISTRATION_PRINT_REG_CARD_LOCAL_KEY",
-                    "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print.html",
-                    "shortcutKey": "P"
-                }
-            ],
-            "conceptSetUI": {
-                "REGISTRATION FEES": {
-                    "required": false,
-                    "label": "Fee"
-                },
-                "FHS": {
-                    "buttonSelect": true
-                },
-                "defaults":{
-                    "FHS": "Present"
-                }
-            },
-            "fieldValidation" : {
-                "primaryContact" : {"pattern" : "[0-9]{8,10}", "errorMessage" : "Should be 12 characters starting with 91 (country code)"},
-                "landHolding" : {"pattern" : "[0-9]{0,3}", "errorMessage" : "Should be between 1 to 999 acres"},
-                "familyName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
-                "givenName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
-                "middleName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
-                "address1" : {"pattern" : "[a-zA-Z0-9]{3}", "errorMessage" : "Should contain 3 characters"}
-            },
-            "patientSearch": {
-              "programAttributes": {
-              "label": "Program ID",
-              "placeholder": "Enter Reg ID",
-              "field": "Registration Number"
-            },
-                "customAttributes": {
-                    "label": "National/File ID",
-                    "placeholder": "National/File ID",
-                    "fields": [ "fileReferenceID"]
-                }
-            }
-        }
+        "order":2,
+        "expanded":true
+      },
+      "hidden":{
+        "attributes":[
+          "primaryContact"
+        ]
+      },
+      "defaults":{
+        "class":"General"
+      }
+    },
+    "addressHierarchy":{
+      "showAddressFieldsTopDown":false,
+      "strictAutocompleteFromLevel":"stateProvince"
+    },
+    "relationshipTypeMap":{
+      "Doctor":"provider",
+      "Parent":"patient"
+    },
+    "autoCompleteFields":[
+      "familyName",
+      "caste"
+    ],
+    "defaultIdentifierPrefix":"GAN",
+    "defaultVisitType":"HIV PROGRAMME",
+    "disablePhotoCapture":false,
+    "searchByIdForwardUrl":"/patient/{{patientUuid}}",
+    "afterVisitSaveForwardUrl":"../registration",
+    "showMiddleName":true,
+    "showBirthTime":false,
+    "showCasteSameAsLastNameCheckbox":false,
+    "printOptions":[
+      {
+        "translationKey":"REGISTRATION_PRINT_REG_CARD_LOCAL_KEY",
+        "templateUrl":"/bahmni_config/openmrs/apps/registration/registrationCardLayout/print.html",
+        "shortcutKey":"P"
+      }
+    ],
+    "conceptSetUI":{
+      "REGISTRATION FEES":{
+        "required":false,
+        "label":"Fee"
+      },
+      "FHS":{
+        "buttonSelect":true
+      },
+      "defaults":{
+        "FHS":"Present"
+      }
+    },
+    "fieldValidation":{
+      "primaryContact":{
+        "pattern":"[0-9]{8,10}",
+        "errorMessage":"Should be 12 characters starting with 91 (country code)"
+      },
+      "landHolding":{
+        "pattern":"[0-9]{0,3}",
+        "errorMessage":"Should be between 1 to 999 acres"
+      },
+      "familyName":{
+        "pattern":"[a-zA-Z]{0,}",
+        "errorMessage":"Should contain characters"
+      },
+      "givenName":{
+        "pattern":"[a-zA-Z]{0,}",
+        "errorMessage":"Should contain characters"
+      },
+      "middleName":{
+        "pattern":"[a-zA-Z]{0,}",
+        "errorMessage":"Should contain characters"
+      },
+      "address1":{
+        "pattern":"[a-zA-Z0-9]{3}",
+        "errorMessage":"Should contain 3 characters"
+      }
+    },
+    "patientSearch":{
+      "programAttributes":{
+        "label":"Program ID",
+        "placeholder":"Enter Reg ID",
+        "field":"Registration Number"
+      },
+      "customAttributes":{
+        "label":"National/File ID",
+        "placeholder":"National/File ID",
+        "fields":[
+          "fileReferenceID"
+        ]
+      }
+    }
+  }
 }
