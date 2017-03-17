@@ -22,11 +22,11 @@
         "title":"National Identification",
         "translationKey":"National Identification",
         "attributes":[
-          "Driving License",
           "National ID",
+          "Voting ID",
           "Passport ID",
-          "Voting ID"
-        ],
+          "Driving License"
+  ],
         "order":2,
         "expanded":true
       },
